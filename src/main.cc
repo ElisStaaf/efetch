@@ -28,6 +28,24 @@ void getKernelVersion() {
     }
 }
 
+void getUsr() {
+    char *ret;
+    char buf[128] = {0};
+    FILE *fp;
+
+    if ((fp = \
+        popen("echo -e \"\\033[0;32m$(whoami)\\033[0;31m@\\033[0;36m$(hostname)\\033[37;0m\"", "r")) \
+        == NULL) {
+        printf("[ERROR]: Couldn't pipe!\n");
+        exit(1);
+    }
+
+    while (fgets(buf, 128, fp) != NULL) {
+        std::cout << buf;
+    }
+}
+
+
 /* This only works if you have faith in the Linux gods that
  * every linux distrobution has this "/etc/os-release" file,
  * which I hope, but I would never know. */
@@ -50,10 +68,10 @@ string getDistroName() {
 int EFetch::fetch() {
     string ascii = \
     "         _nnnn_                      \n"
-    "        dGGGGMMb     ,\"\"\"\"\"\"\"\"\"\"\"\"\"\".\n"
-    "       @p~qp~~qMb    | Linux Rules! |\n"
-    "       M|@||@) M|   _;..............'\n"
-    "       @,----.JM| -'                \n"
+    "        dGGGGMMb                     \n"
+    "       @p~qp~~qMb                    \n"
+    "       M|@||@) M|                    \n"
+    "       @,----.JM|                    \n"
     "      JS^\\__/   qKL                   \n"
     "     dZP        qKRb                 \n"
     "    dZP          qKKb                \n"
@@ -66,6 +84,7 @@ int EFetch::fetch() {
     "\\____   )MMMMMM|   .'                \n"
     "     `-'       `--'                  \n";
     std::cout << ascii + "\n";
+    getUsr();
     std::cout << "\x1b[0;32mOperating system:\x1b[0;37m " + getDistroName() + "\n";
     std::cout << "\x1b[0;32mKernel version:\x1b[0;37m ";
     getKernelVersion();
