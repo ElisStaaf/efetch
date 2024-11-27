@@ -9,10 +9,6 @@
 #include <sys/utsname.h>
 using namespace std;
 
-#define _win 1
-#define _mac 2
-#define _linux 3
-
 void getKernelVersion() {
     char *ret;
     char buf[128] = {0};
