@@ -1,12 +1,12 @@
 EFetch
 ===========
-.. image:: https://img.shields.io/badge/Build%20(fedora)-passing-2a7fd5?logo=fedora&logoColor=2a7fd5&style=for-the-badge
+.. image:: https://img.shields.io/badge/Build%20(fedora)-passing-2a7fd5?logo=fedora&logoColor=2a7fd5
    :alt: Build = Passing
    :target: https://github.com/ElisStaaf/efetch
-.. image:: https://img.shields.io/badge/Version-1.0.0-38c747?style=for-the-badge
+.. image:: https://img.shields.io/badge/Version-1.0.0-38c747
    :alt: Version = 1.0.0
    :target: https://github.com/ElisStaaf/efetch
-.. image:: https://img.shields.io/badge/Language-C++-grey?logo=c%2B%2B&logoColor=white&labelColor=blue&&style=for-the-badge
+.. image:: https://img.shields.io/badge/Language-C++-grey?logo=c%2B%2B&logoColor=white&labelColor=blue
    :alt: Language = C++
    :target: https://github.com/ElisStaaf/efetch
 
